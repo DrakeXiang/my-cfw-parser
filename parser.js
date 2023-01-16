@@ -18,7 +18,7 @@ module.exports.parse = async (
 }
 
 function checkIsWanted(proxyName) {
-  const regex = /(\d+)倍/
+  const regex = /((\d+\.)?\d+)倍/
   if (proxyName.includes('①')) {
     const matchRes = proxyName.match(regex)
     return !matchRes || Number(matchRes[1]) <= 2
